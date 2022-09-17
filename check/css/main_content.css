@@ -86,27 +86,6 @@ html{
     background-color: rgb(90,197,219);
 }
 
-/* @keyframes filling {
-  from{
-    background-position: center 25%;
-  }
-  to {
-    background-position: center 50%;
-  }
-}
-.banner-content span{
-  background-image:  url(https://static.pexels.com/photos/4827/nature-forest-trees-fog.jpeg);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  color:  #FFFFFF;
-  padding-top: 20px;
-  font-size: 170px;
-  font-family: 'Bungee', cursive;
-  animation: filling 3s ease forwards;
-} */
-
-
-
 #ploggings{
     width: 100%;
     background-size: cover;
@@ -175,11 +154,11 @@ html{
     width: 100%;
     background-size: cover;
     background-position: center;
-    height: 2500px;
+    height: 3500px;
 }
 .main-container{
     width: 100%;
-    height: 2500px;
+    height: 3500px;
     position: relative;
     text-align: center;
     align-items: center;
@@ -206,6 +185,10 @@ html{
     text-align: center;
 }
 .main-wrap-top{
+    background-color: rgba(0,0,0,0.2);
+    padding-top: 20px;
+    height: 8%;
+    line-height: 200%;
     margin-top: 350px;
 }
 .main-wrap-top>span{
@@ -213,10 +196,12 @@ html{
     font-size: 38px;
     line-height: 120%;
     font-weight: 700;
+    text-decoration: underline;
 }
 .main-wrap-top>span:nth-child(3){
     font-size: 25px;
     font-weight: 500;
+    text-decoration: none;
 }
 .main-wrap-bottom{
     margin-top: 500px;
@@ -249,6 +234,32 @@ html{
     font-size: 27px;
     line-height: 35px;
     font-weight: bolder;
+}
+@keyframes filling {
+from{
+    background-position: center 25%;
+}
+to {
+    background-position: center 50%;
+}
+}
+.main-text {
+    background-image:  url(/img/1.jpg);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    color:  #FFFFFF;
+    padding-top: 20px;
+    font-size: 55px;
+    font-weight: bolder;
+    animation: filling 10s ease forwards;
+    animation-iteration-count: infinite;
+    margin-bottom: 100px;
+}
+.main-img{
+    height: 50%;
+    width: 50%;
+    object-fit: contain;
+    display: flex;
 }
 
 
