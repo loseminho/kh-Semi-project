@@ -127,6 +127,7 @@ html{
     height: 8%;
     line-height: 200%;
     margin-top: 350px;
+    opacity: 0;
 }
 .main-wrap-top>span{
     color: white;
@@ -142,6 +143,7 @@ html{
 }
 .main-wrap-bottom{
     margin-top: 600px;
+    opacity: 0;
 }
 .main-wrap-bottom>span{
     color: white;
@@ -164,6 +166,7 @@ html{
     color: white;
     font-size: 25px;
     line-height: 35px;
+    opacity: 0;
 }
 .main-title-bottom{
     margin-top: 72px;
@@ -427,7 +430,7 @@ to {
     font-weight: bold;
 }
 .plogging-content{
-    background-color: white;
+    background-color: #e5e7eb;
     width: 100%;
     height: 700px;
     display: inline-block;
@@ -465,6 +468,226 @@ to {
 }
 
 
+
+@import url('http://fonts.cdnfonts.com/css/dunggeunmo');
+@font-face {
+    font-family: 'DOSMyungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSMyungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+#ranking{
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    height: 1000px;
+}
+.ranking-container{
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.ranking {
+    position: relative;
+}
+.ranking-title{
+    text-align: center;
+    height: 200px;
+    width: 100%;
+    line-height: 300px;
+    font-size: 47px;
+    font-weight: bold;
+}
+.ranking-content{
+    background-color: rgb(224, 224, 224);
+    width: 100%;
+    height: 800px;
+    display: inline-block;
+}
+
+.swiper-slide>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+.swiper-wrap{
+    padding-top: 50px;
+    margin: 0 auto;
+    width: 60%;
+    height: 83%;
+}
+.swiper-slide-wrap{
+    background-color: rgba(0,0,0,0.4);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 99;
+}
+.swiper-slide-content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+}
+.swiper-slide-content-top{
+    width: 100%;
+    height: 30%;
+    font-size: 35px;
+    color: #fff;
+    font-family: 'DungGeunMo', sans-serif;
+    line-height: 50px;
+}
+.swiper-slide-content-top img{
+    margin-top: 50px;
+    width: 20%;
+    height: 50%;
+}
+
+.swiper-slide-content-middle{
+    width: 100%;
+    height: 70%;
+    margin: 0 auto;
+}
+.slide-content-left{
+    width: 50%;
+    height: 98%;
+    margin-top: 2%;
+    margin-left: 5%;
+    float: left;
+}
+.slide-content-left-top{
+    height: 11%;
+    font-size: 17px;
+    color: #fff;
+    font-family: 'DungGeunMo', sans-serif;
+}
+.slide-content-left-top span{
+    font-size: 35px;
+    color: #fff;
+    font-family: 'DungGeunMo', sans-serif;
+}
+.slide-content-left-middle{
+    width: 100%;
+    height: 80%;
+    margin: 0 auto;
+}
+.slide-content-left-middle ul{
+    width: 80%;
+    height: 20%;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: rgba(224, 224, 224,0.7);
+}
+.slide-content-left-middle ul>li{
+    margin-top: 7px;
+    height: 75%;
+    float: left;
+    width: 32.9%;
+    font-size: 15px;
+    line-height: 180%;
+    font-family: 'DungGeunMo', sans-serif;
+    border-right: 2px solid black;
+}
+.slide-content-left-middle ul>li:last-child{
+    border: none;
+}
+.slide-content-sub{
+    width: 80%;
+    height: 40%;
+    margin: 0 auto;
+    margin-top:25px;
+    background-color: rgba(224, 224, 224,0.7);
+}
+.slide-content-sub h3{
+    font-family: 'SBAggroB';
+    line-height: 40px;
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1px solid black;
+}
+.slide-content-sub p{
+    margin-top: 15px;
+    font-size: 15px;
+}
+.slide-content-right{
+    width: 40%;
+    height: 90%;
+    margin-top: 2%;
+    float: left;
+}
+
+.slide-content-name{
+    height: 11%;
+    font-size: 17px;
+    color: #fff;
+    font-family: 'DungGeunMo', sans-serif;
+    margin-bottom: 25px;
+}
+
+.slide-content-name span{
+    font-size: 30px;
+    color: #fff;
+    font-family: 'DungGeunMo', sans-serif;
+}
+.slide-content-img{
+    width: 70%;
+    height: 80%;
+    margin: 0 auto;
+}
+
+.slide-content-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#chart{
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    height: 850px;
+}
+.chart-container{
+    width: 100%;
+    height: 850px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.chart-title{
+    text-align: center;
+    height: 200px;
+    width: 100%;
+    line-height: 300px;
+    font-size: 47px;
+    font-weight: bold;
+}
+.chart-content{
+    background-color: #e5e7eb;
+    width: 100%;
+    height: 700px;
+    display: inline-block;   
+}
+#lineChartArea{
+    background-color: #e5e7eb;
+}
+g{
+    text-align: left;
+}
 
 
 #support{
@@ -532,172 +755,4 @@ to {
     transition-duration: 0.8s;
     font-size: 1.1em;
     background-color: rgb(90,197,219);
-}
-
-
-
-@import url('http://fonts.cdnfonts.com/css/dunggeunmo');
-@font-face {
-    font-family: 'DOSMyungjo';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSMyungjo.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-#ranking{
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    height: 900px;
-}
-.ranking-container{
-    width: 100%;
-    height: 900px;
-    position: relative;
-    text-align: center;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.ranking {
-    position: relative;
-}
-.ranking-title{
-    text-align: center;
-    height: 100px;
-    width: 100%;
-    line-height: 100px;
-    font-size: 36px;
-    font-weight: bold;
-    color: #ffda0f;
-    font-family: 'DungGeunMo', sans-serif;
-}
-.ranking-content{
-    background-color: rgb(224, 224, 224);
-    width: 100%;
-    height: 800px;
-    display: inline-block;
-}
-/* .ranking-list{
-    margin: 0 auto;
-    width: 95%;
-    height: 100%;
-}
-.ranking-list>li{
-    float: left;
-    border: 1px solid black;
-    width: 16%;
-    height: 70%;
-    margin: 15px;
-    margin-top: 70px;
-    overflow: hidden;
-}
-.ranking-list>li>img{
-    width: 100%;
-    object-fit: cover;
-    text-align: center;
-    object-position: center;
-
-} */
-.swiper-slide>img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.swiper {
-    width: 100%;
-    height: 100%;
-  }
-.swiper-wrap{
-    padding-top: 50px;
-    margin: 0 auto;
-    width: 60%;
-    height: 83%;
-}
-.swiper-slide-wrap{
-    background-color: rgba(0,0,0,0.4);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 99;
-}
-.swiper-slide-content{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: 100;
-}
-.swiper-slide-content-top{
-    width: 100%;
-    height: 30%;
-    font-size: 35px;
-    color: #fff;
-    font-family: 'DungGeunMo', sans-serif;
-    line-height: 50px;
-}
-.swiper-slide-content-top img{
-    margin-top: 50px;
-    width: 20%;
-    height: 50%;
-}
-
-.swiper-slide-content-middle{
-    width: 100%;
-    height: 50%;
-}
-.slide-content-left{
-    width: 50%;
-    height: 98%;
-    margin-top: 2%;
-}
-.slide-content-left-top{
-    font-size: 17px;
-    color: #fff;
-    font-family: 'DungGeunMo', sans-serif;
-}
-.slide-content-left-top span{
-    font-size: 35px;
-    color: #fff;
-    font-family: 'DungGeunMo', sans-serif;
-}
-.slide-content-left-middle{
-    width: 90%;
-    height: 100%;
-    margin: 0 auto;
-}
-.slide-content-left-middle ul{
-    width: 100%;
-    height: 35%;
-    margin-top: 20px;
-    background-color: rgba(224, 224, 224,0.7);
-}
-.slide-content-left-middle ul li{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    height: 100%;
-    float: left;
-    width: 16.5%;
-    font-size: 15px;
-    line-height: 200%;
-    font-family: 'DungGeunMo', sans-serif;
-}
-.slide-content-sub{
-    width: 100%;
-    height: 50%;
-    margin-top:25px;
-    background-color: rgba(224, 224, 224,0.7);
-}
-.slide-content-sub h3{
-    font-family: 'SBAggroB';
-    padding-bottom: 10px;
-}
-.slide-content-right{
-    width: 50%;
-    height: 98%;
-    margin-top: 2%;
-}
-.swiper-slide-content-bottom{
-    width: 100%;
-    height: 20%;
 }

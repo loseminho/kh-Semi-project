@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/main-button.css">
     <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 
+    <!--구글차트 사용 CDN-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <!-- swiper 사용 CDN-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
@@ -42,7 +44,7 @@
                         <li><a href="javascript:volid(0);">쓰담 스토리</a></li>
                         <li><a href="javascript:volid(0);">쓰담 굿즈</a></li>
                         <li><a href="javascript:volid(0);">쓰담 소식</a></li>
-                        <li><a href="javascript:volid(0);">진행중인 플로깅</a></li>
+                        <li><a href="/plogging.html">진행중인 플로깅</a></li>
                         <li><a href="javascript:volid(0);">관리자</a></li>
                     </ul>
                     <ul class="util-menu">
@@ -52,9 +54,6 @@
             </div>
         </header>
         <!-- // header -->
-
-
-
 
 
 
@@ -91,8 +90,8 @@
                                 <span>-2016 세계경제포럼-</span><br>
                         </div>
                         <div class="main-wrap-bottom">
-                            <span>한마디 더<br>
-                            사부작 올려보겠습니다.</span><br>
+                            <span>이대로 <br>
+                            꾸준히 버리시겠습니까?</span><br>
                             <span>-자라자라잔잔-</span><br>
                         </div>
                     </div>
@@ -123,7 +122,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#ploggings" class="button style2 down anchored"></a>
+                    <a href="#todo" class="button style2 down anchored"></a>
                 </div>
             </section>
             <!-- End Main section-->
@@ -157,7 +156,7 @@
                             <div class="todo-content-right"><img src="/img/todoright.png" alt=""></div>
                         </div>
                     </div>
-                    <a href="#ranking" class="button style2 down anchored"></a>
+                    <a href="#ploggings" class="button style2 down anchored"></a>
                 </div>
             </section>
             <!-- End Todo section-->
@@ -179,7 +178,7 @@
                             
                         </div>
                     </div>
-                    <a href="#todo" class="button style2 down anchored"></a>
+                    <a href="#ranking" class="button style2 down anchored"></a>
                 </div>
             </section>
             <!-- End Ploggings section-->
@@ -205,24 +204,28 @@
                                         </div>
                                         <div class="swiper-slide-content-middle">
                                             <div class="slide-content-left">
-                                                <div class="slide-content-left-top">총 포인트<br><span>6000</span></div>
+                                                <div class="slide-content-left-top">총 포인트<br><span>6000</span> POINT</div>
                                                 <div class="slide-content-left-middle">
                                                     <ul>
                                                         <li>캔<br>30</li>
                                                         <li>플라스틱<br>127</li>
                                                         <li>병<br>44</li>
+                                                    </ul>
+                                                    <ul>
                                                         <li>종이<br>82</li>
                                                         <li>비닐<br>11</li>
                                                         <li>담배꽁초<br>357</li>
                                                     </ul>
+
                                                     <div class="slide-content-sub">
-                                                        <h3>동해 불꽃 독침 가오리</h3>
+                                                        <h3>동해 불꽃 독침 가오리(닉네임 db)</h3>
+                                                    <p>"안녕하세요 가오리입니다."(자기소개 db)</p>
                                                     </div>
                                                 </div>
-                                                <div class="slide-content-left-bottom"></div>
                                             </div>
                                             <div class="slide-content-right">
-
+                                                <div class="slide-content-name">전체 '1'등<br><span>진민호(db)</span> 님</div>
+                                                <div class="slide-content-img"><img src="/img/13.jpg" alt=""></div>
                                             </div>
                                         </div>
                                         <div class="swiper-slide-content-bottom"></div>
@@ -245,19 +248,29 @@
                             <!-- If we need scrollbar -->
                             <div class="swiper-scrollbar"></div>
                         </div>
-                        <!-- <ul class="ranking-list">
-                            <li><img src="/img/teacher.jpg" alt=""></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul> -->
                     </div>
-                    <a href="#support" class="button style2 down anchored"></a>
+                    <a href="#chart" class="button style2 down anchored"></a>
                 </div>
             </section>
             <!-- End Ranking section-->
             
+            <!-- Support section-->
+            <section id="chart">
+                <div class="chart-container">
+                    <div class="chart-title">요일별 플로깅 활동 차트</div>
+                    <div class="chart-content">
+                        <div id="Line_Controls_Chart">
+                                <!-- 라인 차트 생성할 영역 -->
+                                    <div id="lineChartArea" style="padding:0px 20px 0px 0px;"></div>
+                                <!-- 컨트롤바를 생성할 영역 -->
+                                    <div id="controlsArea" style="padding:0px 20px 0px 0px;"></div>
+                        </div>
+                        <a href="#support" class="button style2 down anchored"></a>
+                    </div>
+                </div>
+            </section>
+            <!-- End Support section--
+
             <!-- Support section-->
             <section id="support">
                 <div class="support-container">
@@ -267,7 +280,7 @@
                         <p>쓰레기로 고통 받는 지구에겐</p><br>
                         <p>바로 오늘의 도움이 필요합니다</p><br>
                         <div><a href="#">지구푸르깅 후원하기</a></div>
-                        <a href="#ranking" class="button style2 down anchored"></a>
+                        <a href="#" class="button style2 down anchored"></a>
                     </div>
                 </div>
             </section>
@@ -348,84 +361,128 @@
         });
     }
     });
-    $(".main-wrap-top").each(function () {
-        let objectTop = $(this).offset().top;
-        let windowBottom = $(window).scrollTop() + $(window).innerHeight();
-        if (objectTop < windowBottom) {
-        if (objectTop < windowBottom - animation_height) {
-            $(this).css({
-            transition: "opacity 0.1s linear",
-            transition: "left 0.2s linear",
-            opacity: 1,
-            left: "0px",
-            });
-        } else {
-            $(this).css({
-            transition: "opacity 0.7s linear",
-              opacity: (windowBottom - objectTop) * ratio,
-            transition: "left 0.7s linear",
-              left: `${200 * (1 - (windowBottom - objectTop) * ratio)}px`,
-            });
-        }
-        } else {
-        $(this).css({
-            opacity: 0,
-            left: "200px",
-        });
-    }
+
+$(document).ready(function() {
+    $(window).scroll( function(){
+        $('.main-title-middle').each( function(i){
+            
+            var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            if( bottom_of_window > bottom_of_element ){
+                $(this).animate({'opacity':'1','margin-left':'0px'},1000);
+            }
+            
+        }); 
     });
-    $(".main-wrap-bottom").each(function () {
-        let objectTop = $(this).offset().top;
-        let windowBottom = $(window).scrollTop() + $(window).innerHeight();
-        if (objectTop < windowBottom) {
-        if (objectTop < windowBottom - animation_height) {
-            $(this).css({
-            transition: "opacity 0.1s linear",
-            transition: "left 0.2s linear",
-            opacity: 1,
-            left: "0px",
-            });
-        } else {
-            $(this).css({
-            transition: "opacity 0.7s linear",
-              opacity: (windowBottom - objectTop) * ratio,
-            transition: "left 0.7s linear",
-              left: `${200 * (1 - (windowBottom - objectTop) * ratio)}px`,
-            });
-        }
-        } else {
-        $(this).css({
-            opacity: 0,
-            left: "200px",
-        });
-    }
+});
+$(document).ready(function() {
+    $(window).scroll( function(){
+        $('.main-wrap-bottom').each( function(i){
+            
+            var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            if( bottom_of_window > bottom_of_element ){
+                $(this).animate({'opacity':'1','margin-left':'0px'},1000);
+            }
+            
+        }); 
     });
-    $(".main-title").each(function () {
-        let objectTop = $(this).offset().top;
-        let windowBottom = $(window).scrollTop() + $(window).innerHeight();
-        if (objectTop < windowBottom) {
-        if (objectTop < windowBottom - animation_height) {
-            $(this).css({
-            transition: "opacity 0.1s linear",
-            transition: "left 0.2s linear",
-            opacity: 1,
-            left: "0px",
-            });
-        } else {
-            $(this).css({
-            transition: "opacity 0.7s linear",
-              opacity: (windowBottom - objectTop) * ratio,
-            transition: "left 0.7s linear",
-              left: `${200 * (1 - (windowBottom - objectTop) * ratio)}px`,
-            });
-        }
-        } else {
-        $(this).css({
-            opacity: 0,
-            left: "200px",
-        });
-    }
+});
+$(document).ready(function() {
+    $(window).scroll( function(){
+        $('.main-wrap-top').each( function(i){
+            
+            var bottom_of_element = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            if( bottom_of_window > bottom_of_element ){
+                $(this).animate({'opacity':'1','margin-left':'0px'},1000);
+            }
+            
+        }); 
     });
+});
+
+    // $(".main-wrap-top").each(function () {
+    //     let objectTop = $(this).offset().top;
+    //     let windowBottom = $(window).scrollTop() + $(window).innerHeight();
+    //     if (objectTop < windowBottom) {
+    //     if (objectTop < windowBottom - animation_height) {
+    //         $(this).css({
+    //         transition: "opacity 0.1s linear",
+    //         transition: "left 0.2s linear",
+    //         opacity: 1,
+    //         left: "0px",
+    //         });
+    //     } else {
+    //         $(this).css({
+    //         transition: "opacity 0.7s linear",
+    //           opacity: (windowBottom - objectTop) * ratio,
+    //         transition: "left 0.7s linear",
+    //           left: `${200 * (1 - (windowBottom - objectTop) * ratio)}px`,
+    //         });
+    //     }
+    //     } else {
+    //     $(this).css({
+    //         opacity: 0,
+    //         left: "200px",
+    //     });
+    // }
+    // });
+    // $(".main-wrap-bottom").each(function () {
+    //     let objectTop = $(this).offset().top;
+    //     let windowBottom = $(window).scrollTop() + $(window).innerHeight();
+    //     if (objectTop < windowBottom) {
+    //     if (objectTop < windowBottom - animation_height) {
+    //         $(this).css({
+    //         transition: "opacity 0.1s linear",
+    //         transition: "left 0.2s linear",
+    //         opacity: 1,
+    //         left: "0px",
+    //         });
+    //     } else {
+    //         $(this).css({
+    //         transition: "opacity 0.7s linear",
+    //           opacity: (windowBottom - objectTop) * ratio,
+    //         transition: "left 0.7s linear",
+    //           left: `${200 * (1 - (windowBottom - objectTop) * ratio)}px`,
+    //         });
+    //     }
+    //     } else {
+    //     $(this).css({
+    //         opacity: 0,
+    //         left: "200px",
+    //     });
+    // }
+    // });
+    // $(".main-title").each(function () {
+    //     let objectTop = $(this).offset().top;
+    //     let windowBottom = $(window).scrollTop() + $(window).innerHeight();
+    //     if (objectTop < windowBottom) {
+    //     if (objectTop < windowBottom - animation_height) {
+    //         $(this).css({
+    //         transition: "opacity 0.1s linear",
+    //         transition: "left 0.2s linear",
+    //         opacity: 1,
+    //         left: "0px",
+    //         });
+    //     } else {
+    //         $(this).css({
+    //         transition: "opacity 0.7s linear",
+    //           opacity: (windowBottom - objectTop) * ratio,
+    //         transition: "left 0.7s linear",
+    //           left: `${200 * (1 - (windowBottom - objectTop) * ratio)}px`,
+    //         });
+    //     }
+    //     } else {
+    //     $(this).css({
+    //         opacity: 0,
+    //         left: "200px",
+    //     });
+    // }
+    // });
 
 
     }
@@ -434,19 +491,19 @@
     opacity: 0,
     left: "200px",
     });
-    $(".main-wrap-top").css({
-    opacity: 0,
-    left: "200px",
-    });
-    $(".main-wrap-bottom").css({
-    opacity: 0,
-    left: "200px",
-    });
-    fade();
-    $(".main-title").css({
-    opacity: 0,
-    left: "200px",
-    });
+    // $(".main-wrap-top").css({
+    // opacity: 0,
+    // left: "200px",
+    // });
+    // $(".main-wrap-bottom").css({
+    // opacity: 0,
+    // left: "200px",
+    // });
+    // fade();
+    // $(".main-title").css({
+    // opacity: 0,
+    // left: "200px",
+    // });
     fade();
 
     $(window).scroll(function () {
@@ -478,7 +535,122 @@
 });
 
 
+//구글차트
+var chartDrowFun = {
 
+chartDrow : function(){
+    var chartData = '';
+
+    //날짜형식 변경하고 싶으시면 이 부분 수정하세요.
+    var chartDateformat 	= 'yyyy년MM월dd일';
+    //라인차트의 라인 수
+    var chartLineCount    = 10;
+    //컨트롤러 바 차트의 라인 수
+    var controlLineCount	= 10;
+
+
+    function drawDashboard() {
+
+      var data = new google.visualization.DataTable();
+      //그래프에 표시할 컬럼 추가
+      data.addColumn('datetime' , '날짜');
+      data.addColumn('number'   , '캔 개수');
+      data.addColumn('number'   , '플라스틱 개수');
+      data.addColumn('number'   , '병 개수');
+      data.addColumn('number'   , '종이 개수');
+      data.addColumn('number'   , '비닐 개수');
+      data.addColumn('number'   , '담배꽁초 개수');
+      data.addColumn('number'   , '합계');
+
+      //그래프에 표시할 데이터
+      var dataRow = [];
+
+      for(var i = 0; i <= 29; i++){ //랜덤 데이터 생성
+        var total   = Math.floor(Math.random() * 300) + 1;
+        var can     = Math.floor(Math.random() * total) + 1;
+        var pla     = Math.floor(Math.random() * total) + 4;
+        var bot     = Math.floor(Math.random() * total) + 3;
+        var pap     = Math.floor(Math.random() * total) + 7;
+        var hoho     = Math.floor(Math.random() * total) + 9;
+        var sig   = total - can;
+
+        dataRow = [new Date('2017', '09', i , '10'),can,pla,bot,pap,hoho,sig,total];
+        data.addRow(dataRow);
+      }
+
+
+        var chart = new google.visualization.ChartWrapper({
+          chartType   : 'LineChart',
+          containerId : 'lineChartArea', //라인 차트 생성할 영역
+          options     : {
+                          isStacked   : 'percent',
+                          focusTarget : 'category',
+                          height		  : 500,
+                          width			  : '100%',
+                          legend		  : { position: "top", textStyle: {fontSize: 13}},
+                          pointSize		: 5,
+                          tooltip		  : {textStyle : {fontSize:20}, showColorCode : true,trigger: 'both'},
+                          hAxis			  : {format: chartDateformat, gridlines:{count:chartLineCount,units: {
+                                                              years : {format: ['yyyy년']},
+                                                              months: {format: ['MM월']},
+                                                              days  : {format: ['dd일']},
+                                                              hours : {format: ['HH시']}}
+                                                            },textStyle: {fontSize:12}},
+            vAxis			  : {minValue: 100,viewWindow:{min:0},gridlines:{count:-1},textStyle:{fontSize:10}},
+            animation		: {startup: true,duration: 700,easing: 'in' },
+            annotations	: {pattern: chartDateformat,
+                            textStyle: {
+                            fontSize: 12,
+                            bold: true,
+                            italic: true,
+                            color: '#871b47',
+                            auraColor: '#d799ae',
+                            opacity: 0.8,
+                            pattern: chartDateformat
+                          }
+                        }
+          }
+        });
+
+        var control = new google.visualization.ControlWrapper({
+          controlType: 'ChartRangeFilter',
+          containerId: 'controlsArea',  //control bar를 생성할 영역
+          options: {
+              ui:{
+                    chartType: 'LineChart',
+                    chartOptions: {
+                    chartArea: {'width': '40%','height' : 80},
+                      hAxis: {'baselineColor': 'none', format: chartDateformat, textStyle: {fontSize:12},
+                        gridlines:{count:controlLineCount,units: {
+                              years : {format: ['yyyy년']},
+                              months: {format: ['MM월']},
+                              days  : {format: ['dd일']},
+                              hours : {format: ['HH시']}}
+                        }}
+                    }
+              },
+                filterColumnIndex: 0
+            }
+        });
+
+        var date_formatter = new google.visualization.DateFormat({ pattern: chartDateformat});
+        date_formatter.format(data, 0);
+
+        var dashboard = new google.visualization.Dashboard(document.getElementById('Line_Controls_Chart'));
+        window.addEventListener('resize', function() { dashboard.draw(data); }, false); //화면 크기에 따라 그래프 크기 변경
+        dashboard.bind([control], [chart]);
+        dashboard.draw(data);
+
+    }
+      google.charts.setOnLoadCallback(drawDashboard);
+
+  }
+}
+
+$(document).ready(function(){
+    google.charts.load('50', {'packages':['line','controls']});
+chartDrowFun.chartDrow(); //chartDrow() 실행
+});
 
     </script>
 </body>
