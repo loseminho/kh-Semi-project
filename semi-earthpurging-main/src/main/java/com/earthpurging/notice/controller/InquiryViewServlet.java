@@ -35,6 +35,7 @@ public class InquiryViewServlet extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		
 		int inquiryNo = Integer.parseInt(request.getParameter("inquiryNo"));
+		
 		NoticeService service = new NoticeService();
 		InquiryViewData ivd = service.selectOneInquiry(inquiryNo);
 		
@@ -46,7 +47,8 @@ public class InquiryViewServlet extends HttpServlet {
 			request.setAttribute("loc", "/inquiryList.do?reqPage=1");
 		}else {
 			RequestDispatcher view = request.getRequestDispatcher("WEB-INF/views/notice/inquiryView.jsp");
-			request.setAttribute("inq", inq);
+			request.setAttribute("inq", ivd.getInq());
+			request.setAttribute("commentList", ivd.getCommentList());
 			view.forward(request, response);
 		}
 	}

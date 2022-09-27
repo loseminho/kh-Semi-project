@@ -301,7 +301,7 @@ public class NoticeDao {
 	public int updateInquiry(Connection conn, Inquiry inq) {
 		PreparedStatement pstmt = null;
 		int result = 0;
-		String query = "update inquiry_tbl set inquirer_email=?, inquiry_title=?, inquiry_writer=?, inquiry_filepath=?, inquiry_type=? where inquiry_no=?";
+		String query = "update inquiry_tbl set inquirer_email=?, inquiry_title=?, inquiry_writer=?, inquiry_filepath=?, inquiry_type=?,inquiry_content=? where inquiry_no=?";
 		try {
 			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, inq.getInquirer_email());
@@ -309,7 +309,8 @@ public class NoticeDao {
 			pstmt.setString(3, inq.getInquiry_writer());
 			pstmt.setString(4, inq.getInquiry_filepath());
 			pstmt.setString(5, inq.getInquiry_type());
-			pstmt.setInt(6, inq.getInquiry_no());
+			pstmt.setString(6, inq.getInquiry_content());
+			pstmt.setInt(7, inq.getInquiry_no());
 			result = pstmt.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -324,20 +325,20 @@ public class NoticeDao {
 		PreparedStatement pstmt = null;
 		ResultSet rset = null;
 		ArrayList<InquiryComment> list = new ArrayList<InquiryComment>();
-		String query = "select * from inquiry_comment where inquiry_ref=? and ic_ref is not null order by 1";
+		String query = "select * from inquiry_comment where inquiry_ref=? order by 1";
 		try {
 			pstmt = conn.prepareStatement(query);
 			pstmt.setInt(1, inquiryNo);
 			rset = pstmt.executeQuery();
 			while(rset.next()) {
-				InquiryComment inq = new InquiryComment();
-				inq.setIcContent(rset.getString("ic_content"));
-				inq.setIcDate(rset.getString("ic_date"));
-				inq.setIcNo(rset.getInt("ic_no"));
-				inq.setIcRef(rset.getInt("ic_ref"));
-				inq.setIcWriter(rset.getString("ic_writer"));
-				inq.setInquiryRef(rset.getInt("inquiry_ref"));
-				list.add(inq);
+				InquiryComment ic = new InquiryComment();
+				ic.setIcContent(rset.getString("ic_content"));
+				ic.setIcDate(rset.getString("ic_date"));
+				ic.setIcNo(rset.getInt("ic_no"));
+				ic.setIcRef(rset.getInt("ic_ref"));
+				ic.setIcWriter(rset.getString("ic_writer"));
+				ic.setInquiryRef(rset.getInt("inquiry_ref"));
+				list.add(ic);
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -348,4 +349,82 @@ public class NoticeDao {
 		}
 		return list;
 	}
+
+	public int insertInquiryComment(Connection conn, InquiryComment ic) {
+		PreparedStatement pstmt = null;
+		int result = 0;
+		String query = "insert into inquiry_comment values(ic_seq.nextval,?,?,to_char(sysdate,'yyyy-mm-dd'),?,null)";
+		
+		try {
+			pstmt = conn.prepareStatement(query);
+			pstmt.setString(1, ic.getIcWriter());
+			pstmt.setString(2, ic.getIcContent());
+			pstmt.setInt(3, ic.getInquiryRef());
+			
+			result = pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			JDBCTemplate.close(pstmt);
+		}
+		return result;
+	}
+
+	public int updateInquiryComment(Connection conn, InquiryComment ic) {
+		PreparedStatement pstmt = null;
+		int result = 0;
+		String query = "update inquiry_comment set ic_content=? where ic_no=?";
+		try {
+			pstmt = conn.prepareStatement(query);
+			pstmt.setString(1, ic.getIcContent());
+			pstmt.setInt(2, ic.getIcNo());
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			JDBCTemplate.close(pstmt);
+		}
+		return result;
+	}
+
+	public int deleteInquiryComment(Connection conn, int icNo) {
+		PreparedStatement pstmt = null;
+		int result = 0;
+		String query = "delete inquiry_comment where ic_no=?";
+		try {
+			pstmt = conn.prepareStatement(query);
+			pstmt.setInt(1, icNo);
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			JDBCTemplate.close(pstmt);
+		}
+		return result;
+	}
+
+	public int updateIsAnswer(Connection conn, int inquiryRef) {
+		PreparedStatement pstmt = null;
+		int result = 0;
+		String query = "update inquiry_tbl set is_answer='답변완료' where inquiry_no=?";
+		try {
+			pstmt = conn.prepareStatement(query);
+			pstmt.setInt(1, inquiryRef);
+			result = pstmt.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			JDBCTemplate.close(pstmt);
+		}
+		return result;
+	}
+
+
+
+	
 }
