@@ -1,0 +1,14 @@
+package com.earthpurging.index.dao;
+
+import java.sql.Connection;
+
+import com.earthpurging.index.vo.IndexChellengeRankData;
+
+public class IndexDao {
+
+	public IndexChellengeRankData ChellengeFiveRanking(Connection conn) {
+		
+		return null;
+	}
+
+}

@@ -1,0 +1,26 @@
+package com.earthpurging.index.vo;
+
+import java.util.ArrayList;
+
+public class IndexChellengeRankData {
+	private ArrayList<IndexChellengeRank> list;
+	
+	public IndexChellengeRankData() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public IndexChellengeRankData(ArrayList<IndexChellengeRank> list) {
+		super();
+		this.list = list;
+	}
+
+	public ArrayList<IndexChellengeRank> getList() {
+		return list;
+	}
+
+	public void setList(ArrayList<IndexChellengeRank> list) {
+		this.list = list;
+	}
+	
+}

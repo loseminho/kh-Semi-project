@@ -1,0 +1,5 @@
+package com.earthpurging.index.model.dao;
+
+public class IndexDao {
+
+}

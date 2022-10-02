@@ -1,0 +1,24 @@
+package com.earthpurging.index.model.vo;
+
+public class ChellengeMemberData {
+	private int memberNo;
+	private String memberId;
+	private String memberPw;
+	private String memberName;
+	private String memberPhone;
+	private String memberAddr;
+	private String memberEmail;
+	private int memberLevel;
+	private String memberBirth;
+	private String nickname;
+	private String enrollDate;
+	private	int totalPoint;
+	private String memberIntro;
+	private int questCan; //캔개수
+	private int questPla; //플라스틱 개수
+	private int questGlass; //병개수
+	private int questPaper; //종이 개수
+	private int questWrapper; //비닐 개수
+	private int questTabacoo; //담배꽁초 개수
+	private int questPoint; //퀘스트 점수
+}

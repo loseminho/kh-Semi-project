@@ -1,0 +1,16 @@
+package com.earthpurging.index.model.vo;
+
+public class Plogging {
+	private String crewName;
+	private String crewBirth;
+	private String crewPlace;
+	private String crewPhone;
+	private String crewEmail;
+	private String crewKind;
+	private int memberNo;
+	public Plogging() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+}

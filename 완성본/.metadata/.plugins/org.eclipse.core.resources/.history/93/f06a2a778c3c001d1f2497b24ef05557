@@ -1,0 +1,20 @@
+package com.earthpurging.chellenge.model.service;
+
+import com.earthpurging.chellenge.model.dao.ChellengeDao;
+import com.earthpurging.index.model.vo.ChellengeRankData;
+
+public class ChellengeService {
+	private ChellengeDao dao;
+
+	public ChellengeService() {
+		super();
+		dao = new ChellengeDao();
+		// TODO Auto-generated constructor stub
+	}
+
+	public ChellengeRankData selectFiveRank() {
+		
+		return null;
+	}
+	
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.earthpurging.chellenge.model.vo.Chellenge"/>
+    <fullyQualifiedTypeName name="com.earthpurging.index.dao.IndexDao"/>
+    <fullyQualifiedTypeName name="java.net.ConnectException"/>
+    <fullyQualifiedTypeName name="org.apache.catalina.valves.JDBCAccessLogValve"/>
+    <fullyQualifiedTypeName name="com.earthpurging.index.vo.IndexChellengeRankData"/>
+    <fullyQualifiedTypeName name="com.earthpurging.index.controller.chellengeRank"/>
+    <fullyQualifiedTypeName name="com.earthpurging.index.vo.IndexChellengeRank"/>
+    <fullyQualifiedTypeName name="com.earthpurging.index.service.IndexService"/>
+    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="com.earthpurging.chellenge.model.dao.ChellengeDao"/>
+    <fullyQualifiedTypeName name="com.earthpurging.chellenge.model.service.ChellengeService"/>
+    <fullyQualifiedTypeName name="com.earthpurging.index.model.vo.ChellengeRankData"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.earthpurging.index.model.vo.ChellengeRank"/>
+    <fullyQualifiedTypeName name="java.io.Console"/>
+    <fullyQualifiedTypeName name="com.earthpurging.index.model.service.ChellengeService"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="com.earthpurging.index.model.dao.IndexDao"/>
+    <fullyQualifiedTypeName name="com.earthpurging.index.model.vo.ChellengeMemberData"/>
+    <fullyQualifiedTypeName name="com.earthpurging.index.model.vo.Plogging"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="com.earthpurging.index.model.service.IndexService"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="common.JDBCTemplate"/>
+</qualifiedTypeNameHistroy>

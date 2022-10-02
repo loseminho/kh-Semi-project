@@ -1,0 +1,14 @@
+package com.earthpurging.chellenge.model.dao;
+
+import java.util.ArrayList;
+
+import com.earthpurging.index.model.vo.ChellengeRank;
+
+public class ChellengeDao {
+
+	public ArrayList<ChellengeRank> selectFiveRank() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

@@ -1,0 +1,24 @@
+package com.earthpurging.index.service;
+
+import java.sql.Connection;
+
+import com.earthpurging.index.dao.IndexDao;
+import com.earthpurging.index.vo.IndexChellengeRank;
+
+import common.JDBCTemplate;
+
+public class IndexService {
+	private IndexDao dao;
+
+	public IndexService() {
+		super();
+		dao = new IndexDao();
+	}
+
+	public IndexChellengeRank ChellengeFiveRanking() {
+		Connection conn = JDBCTemplate.getConnection();
+		
+		return null;
+	}
+	
+}

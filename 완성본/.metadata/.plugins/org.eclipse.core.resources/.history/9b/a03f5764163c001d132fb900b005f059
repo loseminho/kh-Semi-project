@@ -1,0 +1,13 @@
+package com.earthpurging.index.service;
+
+import com.earthpurging.index.dao.IndexDao;
+
+public class IndexService {
+	private IndexDao dao;
+
+	public IndexService() {
+		super();
+		dao = new IndexDao();
+	}
+	
+}

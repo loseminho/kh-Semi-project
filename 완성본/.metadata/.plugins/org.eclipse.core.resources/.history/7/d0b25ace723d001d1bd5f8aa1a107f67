@@ -1,0 +1,63 @@
+package com.earthpurging.index.model.vo;
+
+public class Plogging {
+	private String ploggingName;
+	private String ploggingBirth;
+	private String ploggingArea;
+	private String ploggingPhone;
+	private String ploggingEmail;
+	private int memberNo;
+	
+	public Plogging() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Plogging(String ploggingName, String ploggingBirth, String ploggingArea, String ploggingPhone,
+			String ploggingEmail, int memberNo) {
+		super();
+		this.ploggingName = ploggingName;
+		this.ploggingBirth = ploggingBirth;
+		this.ploggingArea = ploggingArea;
+		this.ploggingPhone = ploggingPhone;
+		this.ploggingEmail = ploggingEmail;
+		this.memberNo = memberNo;
+	}
+	public String getPloggingName() {
+		return ploggingName;
+	}
+	public void setPloggingName(String ploggingName) {
+		this.ploggingName = ploggingName;
+	}
+	public String getPloggingBirth() {
+		return ploggingBirth;
+	}
+	public void setPloggingBirth(String ploggingBirth) {
+		this.ploggingBirth = ploggingBirth;
+	}
+	public String getPloggingArea() {
+		return ploggingArea;
+	}
+	public void setPloggingArea(String ploggingArea) {
+		this.ploggingArea = ploggingArea;
+	}
+	public String getPloggingPhone() {
+		return ploggingPhone;
+	}
+	public void setPloggingPhone(String ploggingPhone) {
+		this.ploggingPhone = ploggingPhone;
+	}
+	public String getPloggingEmail() {
+		return ploggingEmail;
+	}
+	public void setPloggingEmail(String ploggingEmail) {
+		this.ploggingEmail = ploggingEmail;
+	}
+	public int getMemberNo() {
+		return memberNo;
+	}
+	public void setMemberNo(int memberNo) {
+		this.memberNo = memberNo;
+	}
+	
+	
+}

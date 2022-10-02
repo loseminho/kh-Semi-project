@@ -1,0 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>지구푸르깅</title>
+</head>
+<body>
+<!-- script Line -->
+    <script>
+    window.location = '/signinFrm.do';
+    </script>
+    <!-- End script Line -->
+</body>
+</html>

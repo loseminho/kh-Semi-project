@@ -1,0 +1,27 @@
+package com.earthpurging.chellenge.model.service;
+
+import java.sql.Connection;
+import java.util.ArrayList;
+
+import com.earthpurging.chellenge.model.dao.ChellengeDao;
+import com.earthpurging.index.model.vo.ChellengeRank;
+import com.earthpurging.index.model.vo.ChellengeRankData;
+
+import common.JDBCTemplate;
+
+public class ChellengeService {
+	private ChellengeDao dao;
+
+	public ChellengeService() {
+		super();
+		dao = new ChellengeDao();
+		// TODO Auto-generated constructor stub
+	}
+
+	public ChellengeRankData selectFiveRank() {
+		Connection conn = JDBCTemplate.getConnection();
+		ArrayList<ChellengeRank> list = dao.;
+		return list;
+	}
+	
+}

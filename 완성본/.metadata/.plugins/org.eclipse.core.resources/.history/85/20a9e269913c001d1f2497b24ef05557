@@ -1,0 +1,28 @@
+package com.earthpurging.chellenge.model.dao;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+
+import com.earthpurging.index.model.vo.ChellengeRank;
+
+public class ChellengeDao {
+
+	public ArrayList<ChellengeRank> selectFiveRank() {
+		PreparedStatement pstmt = null;
+		ResultSet rset = null;
+		ArrayList<ChellengeRank> list = new ArrayList<ChellengeRank>();
+		String query = "SELECT rownum AS RANK, p.* FROM (SELECT * FROM (SELECT n.* FROM (SELECT SUM(QUEST_CAN) 캔,\r\n"
+				+ "    SUM(QUEST_PLA) 플라스틱,\r\n"
+				+ "    SUM(QUEST_GLASS) 병,\r\n"
+				+ "    SUM(QUEST_PAPER) 종이,\r\n"
+				+ "    SUM(QUEST_WRAPPER) 비닐,\r\n"
+				+ "    SUM(QUEST_TABACOO) 담배꽁초,\r\n"
+				+ "    SUM(QUEST_POINT) 총점수,\r\n"
+				+ "    MEMBER_NO 회원번호\r\n"
+				+ "    FROM chellenge_list WHERE PERMISSION='Y' GROUP BY MEMBER_NO)n) ORDER BY 총점수 DESC)p WHERE ROWNUM BETWEEN 1 AND 5";
+		
+		return null;
+	}
+	
+}

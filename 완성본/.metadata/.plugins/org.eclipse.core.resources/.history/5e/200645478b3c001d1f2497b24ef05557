@@ -1,0 +1,14 @@
+package com.earthpurging.index.model.vo;
+
+public class ChellengeRank {
+	private int rank; //랭킹 순위
+	private int questCan; //캔개수
+	private int questPla; //플라스틱 개수
+	private int questGlass; //병개수
+	private int questPaper; //종이 개수
+	private int questWrapper; //비닐 개수
+	private int questTabacoo; //담배꽁초 개수
+	private int questPoint; //퀘스트 점수
+	private int memberNo; // 회원번호
+
+}

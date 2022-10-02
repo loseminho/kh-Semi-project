@@ -1,0 +1,5 @@
+package com.earthpurging.index.model.vo;
+
+public class ChellengeRank {
+
+}

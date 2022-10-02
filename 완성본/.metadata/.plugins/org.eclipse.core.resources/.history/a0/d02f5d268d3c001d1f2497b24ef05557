@@ -1,0 +1,16 @@
+package com.earthpurging.chellenge.model.dao;
+
+import java.sql.PreparedStatement;
+import java.util.ArrayList;
+
+import com.earthpurging.index.model.vo.ChellengeRank;
+
+public class ChellengeDao {
+
+	public ArrayList<ChellengeRank> selectFiveRank() {
+		PreparedStatement pstmt = null;
+		
+		return null;
+	}
+	
+}
